@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion Recognition</title>
+    <!-- static\css\style.css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+</head>
+<body>
+    <div class="Navber"><span>Stress Detection</span> </div>
+    <div class="Main-cotainer">
+    <!-- 🔹 Audio  upload Emotion Detection Section -->
+    <div class="container">
+        <h2 class="head">Upload Audio for Emotion Detection</h2>
+        <div class="file-container">
+            <input type="file" id="audioFile" accept="audio/*" class="file-input" onchange="previewAudio()">
+            <label for="audioFile" class="choose-file-text">Choose Audio File</label>
+        </div>
+        <div id="audioPlayerContainer">
+            <audio id="audioPlayer" controls>
+                <!-- Your browser does not support the audio element. -->
+            </audio>
+        </div>
+        <button class="upload-btn" onclick="uploadAudio()">Upload</button>
+        <h3 class="prediction" style="display: none;">Predicted Emotion: <span id="result">None</span></h3>
+    </div>
+    <!-- 🔹 Live Audio Emotion Detection Section -->
+   <div class="container">
+    <h2 class="head">Audio Recorder</h2>
+    <button id="startRecording">Start Recording</button>
+    <button id="stopRecording" disabled>Stop Recording</button>
+    <h3>Recorded Audio:</h3>
+    <audio id="audioPlayback" controls></audio>
+    <button id="uploadAudioo" onclick="UploadAudioLive()" disabled>Upload & Predict Emotion</button>
+    <h3 class="prediction1" style="display: none;">Predicted Emotion: <span id="result1"></span></h3>
+   </div>
+    <!-- 🔹 Video upload Emotion Detection Section -->
+    <div class="container">
+        <h1 class="head">Emotion Detection from Video</h1>
+
+        <!-- Upload Video Form -->
+        <form id="uploadForm" enctype="multipart/form-data">
+            <input  type="file" id="videoFile" accept="video/*" class="file-input" required>
+            <label for="videoFile" class="choose-file-text">Choose Video File</label>
+            <button  type="submit">Upload Video</button>
+        </form>
+
+        <h2>Live Video Stream</h2>
+        <!-- <img id="videoStream" src="{{ url_for('video_stream') }}" alt="Video Stream"> -->
+        <img id="videoStream" src="" alt="Video Stream" style="display:none;">
+        <br>
+        <button onclick="stopVideo()">Stop Video</button>
+    </div>
+    <!-- 🔹 Live Video Emotion Detection Section -->
+
+    <div class="container">
+        <div class="head">Live Video </div>
+        <div class="container2">
+            <div class="secondFirstContainer">
+                <button onclick="turnOnCamera()">Turn On Camera</button>
+                <button onclick="turnOffCamera()">Turn Off Camera</button>
+            </div>
+            <div id="error-message"></div>
+        </div>
+        <div class="secondSecondContainer">
+            <div id="cameraContainer"></div>
+            <div id="emotiondiv"></div>
+        </div>
+    </div>
+</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lamejs/1.2.1/lame.all.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+
+</body>
+</html>

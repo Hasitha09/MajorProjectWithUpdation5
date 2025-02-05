@@ -1,0 +1,213 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0B0B0C;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   margin: 0;
+  
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 10px;
+    background-color: #0B0B0C;
+    padding: 25px;
+    border:2px solid transparent;
+    border-image: linear-gradient(90deg, rgb(20, 154, 251) -30.22%, rgb(19, 239, 149) 78.93%) 1;
+   
+}
+
+.head {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 15px;
+    background: linear-gradient(90deg, rgb(20, 154, 251) -30.22%, rgb(19, 239, 149) 78.93%) text;
+    -webkit-text-fill-color: transparent;
+
+    font-style:inherit;
+}
+
+.upload-btn, button {
+    /* background-color: #4CAF50; */
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-style: solid;
+    background-color: transparent;
+    border:2px solid transparent;
+    /* border-image: linear-gradient(90deg, rgb(20, 154, 251) -30.22%, rgb(19, 239, 149) 78.93%) 1; */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the upload button */
+.upload-btn:hover, button:hover {
+    background: linear-gradient(90deg, rgb(20, 154, 251) -30.22%, rgb(19, 239, 149) 78.93%); /* Gradient background */
+    color: #0B0B0C; /* Text color on hover */
+    border-color: transparent; /* Optional: remove border or set it to transparent */
+}
+
+
+h3 {
+    font-size: 18px;
+    margin-top: 15px;
+    color: #555;
+}
+
+#result {
+    font-size: 20px;
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+input, button {
+    display: block;
+    margin: 10px auto;
+    width: 100%;
+}
+
+.file-input {
+    display: none;
+}
+
+.file-container {
+    margin-top: 10px;
+}
+
+.choose-file-text {
+    display: inline-block;
+    background-color: #f1f1f1;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.choose-file-text:hover {
+    background: linear-gradient(90deg, rgb(20, 154, 251) -30.22%, rgb(19, 239, 149) 78.93%); /* Gradient background */
+    color: #0B0B0C;
+}
+
+#videoStream {
+    display: block;
+    width: 90%;
+    max-width: 500px;
+    height: auto;
+    border: 5px solid black;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    margin: 20px auto;
+   
+}
+#audioPlayerContainer {
+margin-top: 20px;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+audio {
+margin-left: 20px;
+}
+.choose-file-text {
+    display: inline-block;
+    background-color: #f1f1f1;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.choose-file-text:hover {
+    background-color: #e0e0e0;
+}
+#videoStream {
+    display: block;
+    width: 90%;
+    max-width: 500px;
+    height: auto;
+    border: 5px solid black;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    margin: 20px auto;
+}
+.Navber {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 10000; /* Ensure navbar stays on top */
+    background-color: #0B0B0C; /* Solid black background */
+    align-items: center;
+    justify-content: center;
+    box-shadow: unset;
+    border-color: #e0e0e0;
+    font-size: 50px;
+}
+.Navber span {
+    background: linear-gradient(90deg, rgb(20, 154, 251) -30.22%, rgb(19, 239, 149) 78.93%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; /* Hide original text color */
+}
+
+.Main-cotainer
+{
+    margin-top: 90px;
+    width:600px;
+    background-color: #0B0B0C;;
+}
+.audioPlayer
+{
+    background: linear-gradient(90deg, rgb(20, 154, 251) -30.22%, rgb(19, 239, 149) 78.93%); /* Gradient background */
+    color: #0B0B0C;
+}
+
+
+
+
+.recording {
+    background: linear-gradient(90deg, rgb(20, 154, 251) -30.22%, rgb(19, 239, 149) 78.93%);
+    animation: blink 1s infinite;
+    color: black; /* Ensure text is readable */
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+.active-stop {
+    background-color: rgb(0, 100, 128) !important;
+}
+.prediction,.prediction1
+{
+    color: rgb(238, 237, 234);
+}
+#result,#result1
+{
+    background: linear-gradient(90deg, rgb(20, 154, 251) -30.22%, rgb(19, 239, 149) 78.93%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+/* Blinking red for stop button */
+.stop-blink {
+    background-color: red;
+    animation: blink 1s infinite;
+}
